@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_education_details",
+  "info": {
+    "singularName": "user-education-detail",
+    "pluralName": "user-education-details",
+    "displayName": "UserEducationDetail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "educations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "education.education-component"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "education"
+    }
+  }
+}

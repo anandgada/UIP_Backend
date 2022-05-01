@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "providers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "github.connection"
+    },
+    "deatils": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-personal-detail.user-personal-detail",
+      "mappedBy": "user"
+    },
+    "education": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-education-detail.user-education-detail",
+      "inversedBy": "user"
+    },
+    "skill": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-skillsand-project.user-skillsand-project",
+      "inversedBy": "user"
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::users-experience.users-experience",
+      "inversedBy": "user"
+    }
+  }
+}

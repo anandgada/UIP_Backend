@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_personal_details",
+  "info": {
+    "singularName": "user-personal-detail",
+    "pluralName": "user-personal-details",
+    "displayName": "userPersonalDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "date_of_birth": {
+      "type": "date",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "default": "male",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "deatils"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

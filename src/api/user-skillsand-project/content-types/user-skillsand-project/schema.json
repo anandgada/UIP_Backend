@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_skillsand_projects",
+  "info": {
+    "singularName": "user-skillsand-project",
+    "pluralName": "user-skillsand-projects",
+    "displayName": "UserSkillsandProject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "skills": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.project"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "skill"
+    }
+  }
+}

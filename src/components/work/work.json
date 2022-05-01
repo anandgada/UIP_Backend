@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_work_works",
+  "info": {
+    "displayName": "work",
+    "icon": "ambulance"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "From": {
+      "type": "date",
+      "required": true
+    },
+    "To": {
+      "type": "date"
+    }
+  }
+}

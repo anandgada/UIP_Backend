@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_github_connections",
+  "info": {
+    "displayName": "connection",
+    "icon": "angle-double-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "provider": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

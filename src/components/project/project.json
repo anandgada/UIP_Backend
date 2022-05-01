@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_project_projects",
+  "info": {
+    "displayName": "project",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "about": {
+      "type": "string"
+    }
+  }
+}

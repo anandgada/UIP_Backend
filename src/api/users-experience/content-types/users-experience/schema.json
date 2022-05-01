@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users_experiences",
+  "info": {
+    "singularName": "users-experience",
+    "pluralName": "users-experiences",
+    "displayName": "UsersExperience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "experience": {
+      "displayName": "work",
+      "type": "component",
+      "repeatable": true,
+      "component": "work.work"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "experience"
+    }
+  }
+}

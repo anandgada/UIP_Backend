@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_education_education_components",
+  "info": {
+    "displayName": "EducationComponent",
+    "icon": "atom",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "string"
+    },
+    "college": {
+      "type": "string"
+    },
+    "year_of_pass": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}
