@@ -91,6 +91,9 @@
       "relation": "oneToOne",
       "target": "api::users-experience.users-experience",
       "inversedBy": "user"
+    },
+    "linkedin_data": {
+      "type": "json"
     }
   }
 }
